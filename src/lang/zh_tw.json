@@ -1,4 +1,11 @@
 {
-  "hello": "哈囉世界",
-  "component_select_placeholder": "請選擇"
+  "pages_home_welcomeTitle": "你今天下廚了嗎？",
+  "pages_home_welcomeText": "跟朋友比比看誰是時間掌控大師吧！",
+  "component_select_placeholder": "請選擇",
+  "component_levelCard_novice": "新手學徒",
+  "component_levelCard_veteran": "老鳥廚師",
+  "component_levelCard_master": "大師主廚",
+  "component_levelCard_training": "秒訓練",
+  "component_levelCard_difficulty": "難度：",
+  "component_button_select": "選擇"
 }
