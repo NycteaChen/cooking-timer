@@ -1,0 +1,5 @@
+@import "./utils.scss";
+
+body {
+  @apply m-0 min-w-[320px] min-h-dvh;
+}
