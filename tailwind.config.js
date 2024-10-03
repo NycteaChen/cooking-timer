@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         header: "#d4c6b2",
+        info: "#f2e8dc",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
