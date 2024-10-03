@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "@/assets/tailwind.css";
 import "@/assets/scss/index.scss";
+import "./i18n";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
