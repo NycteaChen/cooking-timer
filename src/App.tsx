@@ -4,8 +4,10 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./pages";
 import { Game } from "./pages/Game";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
   return (
     <>
       <Header />
@@ -18,7 +20,7 @@ function App() {
             <Button variant={"outline"}>Home</Button>
           </Link>
           <h1 className="text-primary text-3xl my-5 font-bold underline">
-            Hello world!
+            {t("hello")}
           </h1>
           <Routes>
             <Route path="/" element={<Home />} />
