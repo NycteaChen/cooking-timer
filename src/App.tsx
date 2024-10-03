@@ -12,9 +12,11 @@ function App() {
           <Button>Game</Button>
         </Link>
         <Link to="/" className="mt-6">
-          <Button>Home</Button>
+          <Button variant={"outline"}>Home</Button>
         </Link>
-        <h1 className="text-3xl my-5 font-bold underline">Hello world!</h1>
+        <h1 className="text-primary text-3xl my-5 font-bold underline">
+          Hello world!
+        </h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/game" element={<Game />} />
