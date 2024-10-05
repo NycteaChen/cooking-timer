@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { levelList } from "@/utils/levelList";
+import levelList from "@/utils/levelList";
 import { LevelCard } from "@/components/LevelCard";
 
 export const Home = () => {
@@ -16,7 +16,7 @@ export const Home = () => {
         </h3>
       </section>
       <section className="flex items-center space-y-3 flex-col md:flex-row md:space-y-0 md:space-x-5 md:justify-center max-w-[1320px] mx-auto">
-        {levelList().map((item) => (
+        {levelList.map((item) => (
           <LevelCard {...item} key={item.level} />
         ))}
       </section>

@@ -10,7 +10,7 @@
   "component_levelCard_novice": "新手學徒",
   "component_levelCard_veteran": "老鳥廚師",
   "component_levelCard_master": "大師主廚",
-  "component_levelCard_training": "秒訓練",
+  "component_levelCard_training": "{{second}} 秒訓練",
   "component_levelCard_difficulty": "難度：",
   "component_button_select": "選擇",
   "component_button_back": "返回",
