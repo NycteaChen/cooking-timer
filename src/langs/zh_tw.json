@@ -24,5 +24,17 @@
   "component_gameInstruction_desc2": "點擊<strong>「暫停」</strong>按鈕或是敲擊鍵盤的<strong>「<kbd>Shift</kbd> + <kbd>S</kbd>」</strong>，即可暫停計時。",
   "component_gameInstruction_desc3": "點擊<strong>「繼續」</strong>按鈕或再次敲擊鍵盤的<strong>「<kbd>Shift</kbd> + <kbd>S</kbd>」</strong>，即可繼續計時。",
   "component_gameInstruction_desc4": "點擊<strong>「就是現在！」</strong>按鈕或是敲擊鍵盤的<strong>「<kbd>Space</kbd>」</strong>，計時將會終止並計算成績。",
-  "component_gameInstruction_desc5": "最後向朋友炫耀一下你的好成績吧！"
+  "component_gameInstruction_desc5": "最後向朋友炫耀一下你的好成績吧！",
+  "component_gamingRecipe_title": "請製作一份{{recipe}}",
+  "component_gamingRecipe_targetTime": "預期時間：<s>{{second}}</s> 秒",
+  "game_pause_hint": "暫停計時！",
+  "component_gamingRecipe_grilledSushi": "炙燒壽司",
+  "component_gamingRecipe_eggDropSoup": "蛋花湯",
+  "component_gamingRecipe_toast": "烤吐司",
+  "component_gamingRecipe_grilledMochi": "烤麻糬",
+  "component_gamingRecipe_karaage": "唐揚雞",
+  "component_gamingRecipe_firedDumpling": "煎餃",
+  "component_gamingRecipe_hamburgerSteak": "漢堡排",
+  "component_gamingRecipe_lavaCake": "熔岩蛋糕",
+  "component_gamingRecipe_roastChicken": "烤雞"
 }
