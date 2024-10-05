@@ -4,7 +4,7 @@ import { Trans } from "react-i18next";
 
 export const GameInstruction = memo(() => {
   const { t } = useTranslation();
-  console.log("memo game");
+
   return (
     <div>
       <h6>{t("component_gameInstruction_title")}</h6>

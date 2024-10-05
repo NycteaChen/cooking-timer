@@ -24,5 +24,17 @@
   "component_gameInstruction_desc2": "Click <strong>\"Pause\"</strong> button or press <strong><kbd>Shift</kbd> + <kbd>S</kbd></strong> on the keyboard to pause the timing.",
   "component_gameInstruction_desc3": "Click <strong>\"Resume\"</strong> button or press <strong><kbd>Shift</kbd> + <kbd>S</kbd></strong> on the keyboard again to resume the timing.",
   "component_gameInstruction_desc4": "Click <strong>\"Now!\"</strong> button or press <strong><kbd>Space</kbd></strong> on the keyboard，the timer will end and the score will be calculated.",
-  "component_gameInstruction_desc5": "Show off your good score to your friends!"
+  "component_gameInstruction_desc5": "Show off your good score to your friends!",
+  "component_gamingRecipe_title": "Please make the {{recipe}}",
+  "component_gamingRecipe_targetTime": "Estimated time: <s>{{second}}</s> seconds",
+  "game_pause_hint": "Pause the timing!",
+  "component_gamingRecipe_grilledSushi": "Grilled sushi",
+  "component_gamingRecipe_eggDropSoup": "Egg-drop soup",
+  "component_gamingRecipe_toast": "Toast",
+  "component_gamingRecipe_grilledMochi": "Grilled Mochi",
+  "component_gamingRecipe_karaage": "Karaage",
+  "component_gamingRecipe_firedDumpling": "Fried dumplings",
+  "component_gamingRecipe_hamburgerSteak": "Hamburger steak",
+  "component_gamingRecipe_lavaCake": "Lava cake",
+  "component_gamingRecipe_roastChicken": "Roast chicken"
 }
