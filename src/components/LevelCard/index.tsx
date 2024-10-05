@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { useAppDispatch } from "@/redux/hooks";
+import { setGameLevel } from "@/redux/slices/gameSlice";
 import { Button } from "../ui/button";
 import type { levelItem } from "@/utils/levelList";
-import { Stars } from "@/components/LevelCard/Stars";
+import { Stars } from "@/components/Stars";
 import easyImg from "@/assets/image/level/easy.png";
 import mediumImg from "@/assets/image/level/medium.png";
 import hardImg from "@/assets/image/level/hard.png";
@@ -14,12 +16,14 @@ const imgPool = {
 };
 
 export const LevelCard = ({ name, level, desc, star }: levelItem) => {
+  const dispatch = useAppDispatch();
+
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const selectLevel = () => {
-    console.log("level :>> ", level);
-    navigate("/game");
+    dispatch(setGameLevel(level));
+    navigate(`/game/?level=${level}`);
   };
 
   return (
