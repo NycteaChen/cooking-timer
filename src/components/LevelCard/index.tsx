@@ -1,4 +1,5 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "@/redux/hooks";
 import { setGameLevel } from "@/redux/slices/gameSlice";
 import { Button } from "../ui/button";
@@ -7,7 +8,6 @@ import { Stars } from "@/components/Stars";
 import easyImg from "@/assets/image/level/easy.png";
 import mediumImg from "@/assets/image/level/medium.png";
 import hardImg from "@/assets/image/level/hard.png";
-import { useNavigate } from "react-router-dom";
 
 const imgPool = {
   easy: easyImg,
@@ -15,7 +15,7 @@ const imgPool = {
   hard: hardImg,
 };
 
-export const LevelCard = ({ name, level, desc, star }: levelItem) => {
+export const LevelCard = ({ name, level, time, star }: levelItem) => {
   const dispatch = useAppDispatch();
 
   const { t } = useTranslation();
@@ -32,12 +32,14 @@ export const LevelCard = ({ name, level, desc, star }: levelItem) => {
         <img src={imgPool[level]} alt={level} className="object-cover" />
       </figure>
       <div className="flex flex-col gap-2 py-5 px-8 flex-1 justify-between text-center bg-white sm:bg-info">
-        <h4 className="font-bold !justify-center md:text-[22px]">{name}</h4>
-        <p className="md:text-lg flex-[0] mt-1">{desc}</p>
-        <div className="flex space-x-2 items-center justify-center mx-auto">
-          <span>{t("component_levelCard_difficulty")}</span>
-          <Stars nums={star} />
-        </div>
+        <h4 className="font-bold !justify-center md:text-[22px]">{t(name)}</h4>
+        <p className="md:text-lg flex-[0] mt-1">
+          <Trans
+            i18nKey="component_levelCard_training" // optional -> fallbacks to defaults if not provided
+            values={{ second: time }}
+          />
+        </p>
+        <Stars nums={star} />
         <div className="card-actions justify-center mt-2">
           <Button
             className="w-[120px] md:w-[150px] md:btn-md md:text-base h-8 md:h-12"

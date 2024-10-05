@@ -10,7 +10,7 @@
   "component_levelCard_novice": "Novice",
   "component_levelCard_veteran": "Veteran",
   "component_levelCard_master": "Master",
-  "component_levelCard_training": "seconds",
+  "component_levelCard_training": "{{second}} seconds",
   "component_levelCard_difficulty": "Difficulty:",
   "component_button_select": "Select",
   "component_button_back": "Back",
