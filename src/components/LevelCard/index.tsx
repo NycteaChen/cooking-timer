@@ -1,20 +1,15 @@
 import { Trans, useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "@/redux/hooks";
-import { setGameLevel } from "@/redux/slices/gameSlice";
 import { Button } from "../ui/button";
 import type { levelItem } from "@/utils/levelList";
 import { Stars } from "@/components/Stars";
 import requireImage from "@/utils/requireImage";
 
 export const LevelCard = ({ name, level, time, star }: levelItem) => {
-  const dispatch = useAppDispatch();
-
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const selectLevel = () => {
-    dispatch(setGameLevel(level));
     navigate(`/game/?level=${level}`);
   };
 
@@ -31,7 +26,7 @@ export const LevelCard = ({ name, level, time, star }: levelItem) => {
         <h4 className="font-bold !justify-center md:text-[22px]">{t(name)}</h4>
         <p className="md:text-lg flex-[0] mt-1">
           <Trans
-            i18nKey="component_levelCard_training" // optional -> fallbacks to defaults if not provided
+            i18nKey="component_levelCard_training"
             values={{ second: time }}
           />
         </p>

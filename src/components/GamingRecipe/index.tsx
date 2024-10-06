@@ -1,14 +1,17 @@
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import type { recipeItem } from "@/utils/levelRecipes";
 import requireImage from "@/utils/requireImage";
+import { RecipeContext } from "@/components/GamingCard";
+import { cn } from "@/lib/utils";
 
-type GamingRecipeProps = {
-  recipe: recipeItem;
-};
-
-export const GamingRecipe = memo(({ recipe }: GamingRecipeProps) => {
+export const GamingRecipe = memo(() => {
   const { t } = useTranslation();
+  const { recipe, gameStart } = useContext(RecipeContext) as {
+    recipe: recipeItem;
+    gameStart: boolean;
+  };
+
   return (
     <div>
       <h2 className="text-xl leading-7 font-bold text-center">
@@ -21,7 +24,11 @@ export const GamingRecipe = memo(({ recipe }: GamingRecipeProps) => {
         <img
           src={requireImage(`recipe/${recipe.img}.png`)}
           alt={recipe.img}
-          className="mx-auto max-w-[200px] py-3 w-full animate-bounce-in-1000"
+          className={cn(
+            "mx-auto max-w-[200px] py-3 w-full",
+            gameStart === undefined && "animate-bounce-in-1000",
+            gameStart && "animate-shake-1200"
+          )}
         />
       </figure>
       <h3 className="font-bold text-center">
