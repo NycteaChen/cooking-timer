@@ -43,5 +43,14 @@
   "component_gameResult_good": "It's almost!",
   "component_gameResult_normal": "Not so bad!",
   "component_gameResult_bad": "Keep trying!",
-  "component_gameResult_confusion": "You'd better be away from the kitchen..."
+  "component_gameResult_confusion": "You'd better be away from the kitchen...",
+  "component_resultDialog_title": "Record statistics",
+  "component_resultDialog_empty": "No player data",
+  "component_resultDialog_select_placeholder": "Players",
+  "component_resultDialog_average": "Average time gap (s)",
+  "component_resultDialog_table_recipe": "Recipe",
+  "component_resultDialog_table_accurate": "Most accurate records",
+  "component_resultDialog_table_recent": "Recent records",
+  "component_resultDialog_table_time": "Estimated time (s)",
+  "component_resultDialog_table_score": "Score (s)"
 }

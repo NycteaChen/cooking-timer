@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
-import { Home } from "./pages";
-import { Game } from "./pages/Game";
+import { Home } from "@/pages";
+import { Game } from "@/pages/Game";
+import { Header } from "@/components/Header";
+import { ResultDialog } from "@/components/ResultDialog";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           </Routes>
         </section>
       </main>
+      <ResultDialog />
     </>
   );
 }

@@ -90,18 +90,17 @@ export const GameResult = memo(({ record }: { record: string }) => {
       )}
       <Dialog open={openDialog} onOpenChange={onOpenChange}>
         <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader className="space-y-8 sm:space-y-4">
+          <DialogHeader>
             <DialogTitle>{t("component_gameResult_title")}</DialogTitle>
-            <DialogDescription className="space-y-4 text-center">
-              <span className="text-black font-bold text-lg block">
-                <Trans i18nKey="component_gameResult_yours" values={{ name }} />
-              </span>
-              <span className="text-3xl text-[#e9b407] font-bold block">
-                {score}
-              </span>
-              <span className="block">{renderResultText}</span>
-            </DialogDescription>
+            <DialogDescription aria-describedby={undefined} />
           </DialogHeader>
+          <div className="flex flex-col space-y-4 text-center">
+            <p className="text-black font-bold text-lg">
+              <Trans i18nKey="component_gameResult_yours" values={{ name }} />
+            </p>
+            <h3 className="text-3xl text-[#e9b407] font-bold">{score}</h3>
+            <p className="text-sm">{renderResultText}</p>
+          </div>
           <DialogFooter>
             <Button
               className="mx-auto min-w-[120px] mt-2"

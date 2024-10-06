@@ -43,5 +43,14 @@
   "component_gameResult_good": "就差那麼一點了！",
   "component_gameResult_normal": "感覺還不錯唷！",
   "component_gameResult_bad": "再加把勁！",
-  "component_gameResult_confusion": "你還是別進廚房吧..."
+  "component_gameResult_confusion": "你還是別進廚房吧...",
+  "component_resultDialog_title": "紀錄統計",
+  "component_resultDialog_empty": "無玩家紀錄",
+  "component_resultDialog_select_placeholder": "玩家名",
+  "component_resultDialog_average": "平均時間差(秒)",
+  "component_resultDialog_table_recipe": "食譜",
+  "component_resultDialog_table_accurate": "最準確紀錄",
+  "component_resultDialog_table_recent": "最新紀錄",
+  "component_resultDialog_table_time": "預期時間 (秒)",
+  "component_resultDialog_table_score": "成績 (秒)"
 }
