@@ -1,4 +1,4 @@
-import { memo, useState, useEffect, useRef } from "react";
+import { memo, useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,27 +13,44 @@ export const GamingOperators = memo(
     const [showMask, setShowMask] = useState(false);
     const keyDownStatus: { current: { [key: number]: boolean } } = useRef({});
 
-    useEffect(() => {
-      const keyupEvent = (e: KeyboardEvent) => {
-        keyDownStatus.current[e.keyCode] = false;
-      };
+    const timePauseHandler = useCallback(() => {
+      onTimePause();
+      setShowMask(true);
+    }, [onTimePause]);
 
-      const keydownEvent = (e: KeyboardEvent) => {
+    const timeResumeHandler = useCallback(() => {
+      onTimeResume();
+      setShowMask(false);
+    }, [onTimeResume]);
+
+    const keyupEvent = useCallback((e: KeyboardEvent) => {
+      keyDownStatus.current[e.keyCode] = false;
+    }, []);
+
+    const keydownEvent = useCallback(
+      (e: KeyboardEvent) => {
         keyDownStatus.current[e.keyCode] = true;
 
         if (keyDownStatus.current[16] && keyDownStatus.current[83]) {
           if (showMask) {
-            onTimeResume();
+            timeResumeHandler();
           } else {
-            onTimePause();
+            timePauseHandler();
           }
-          setShowMask(!showMask);
         } else if (keyDownStatus.current[32] && !showMask) {
           onTimeEnd();
           document.removeEventListener("keydown", keydownEvent);
         }
-      };
+      },
+      [showMask, onTimeEnd, timePauseHandler, timeResumeHandler]
+    );
 
+    const timeEndHandler = useCallback(() => {
+      onTimeEnd();
+      document.removeEventListener("keydown", keydownEvent);
+    }, [onTimeEnd, keydownEvent]);
+
+    useEffect(() => {
       document.addEventListener("keydown", keydownEvent);
       document.addEventListener("keyup", keyupEvent);
 
@@ -41,21 +58,18 @@ export const GamingOperators = memo(
         document.removeEventListener("keydown", keydownEvent);
         document.removeEventListener("keyup", keyupEvent);
       };
-    }, [showMask, onTimeEnd, onTimePause, onTimeResume]);
+    }, [keydownEvent, keyupEvent]);
 
     return (
       <>
         <div className="flex w-full flex-col sm:flex-row-reverse justify-center gap-2">
-          <Button className="w-full flex-1" onClick={() => onTimeEnd()}>
+          <Button className="w-full flex-1" onClick={() => timeEndHandler()}>
             {t("component_button_now")}
           </Button>
           <Button
             className="w-full flex-1"
             variant="outline"
-            onClick={() => {
-              onTimePause();
-              setShowMask(true);
-            }}
+            onClick={() => timePauseHandler()}
           >
             {t("component_button_pause")}
           </Button>
@@ -71,10 +85,7 @@ export const GamingOperators = memo(
           </h3>
           <Button
             className="w-[120px] md:text-base"
-            onClick={() => {
-              onTimeResume();
-              setShowMask(false);
-            }}
+            onClick={() => timeResumeHandler()}
           >
             {t("component_button_resume")}
           </Button>
