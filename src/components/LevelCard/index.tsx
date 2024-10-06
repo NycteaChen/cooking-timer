@@ -5,6 +5,7 @@ import { setGameLevel } from "@/redux/slices/gameSlice";
 import { Button } from "../ui/button";
 import type { levelItem } from "@/utils/levelList";
 import { Stars } from "@/components/Stars";
+import requireImage from "@/utils/requireImage";
 
 export const LevelCard = ({ name, level, time, star }: levelItem) => {
   const dispatch = useAppDispatch();
@@ -21,7 +22,7 @@ export const LevelCard = ({ name, level, time, star }: levelItem) => {
     <div className="flex rounded-xl w-full bg-white flex-row md:flex-col shadow-xl overflow-hidden max-w-[500px] md:max-w-full border border-solid border-primary md:hover:shadow-[5px_5px_20px_rgba(71,48,10,0.4)] md:duration-300 md:transition-[box-shadow]">
       <figure className="flex-1 p-5 hidden sm:!flex">
         <img
-          src={`./src/assets/image/level/${level}.png`}
+          src={requireImage(`level/${level}.png`)}
           alt={level}
           className="object-cover"
         />

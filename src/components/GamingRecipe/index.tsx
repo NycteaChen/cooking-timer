@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import type { recipeItem } from "@/utils/levelRecipes";
+import requireImage from "@/utils/requireImage";
 
 type GamingRecipeProps = {
   recipe: recipeItem;
@@ -18,7 +19,7 @@ export const GamingRecipe = memo(({ recipe }: GamingRecipeProps) => {
       </h2>
       <figure>
         <img
-          src={`../src/assets/image/recipe/${recipe.img}.png`}
+          src={requireImage(`recipe/${recipe.img}.png`)}
           alt={recipe.img}
           className="mx-auto max-w-[200px] py-3 w-full animate-bounce-in-1000"
         />
