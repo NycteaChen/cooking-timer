@@ -30,6 +30,7 @@ export const GamingOperators = memo(
           setShowMask(!showMask);
         } else if (keyDownStatus.current[32] && !showMask) {
           onTimeEnd();
+          document.removeEventListener("keydown", keydownEvent);
         }
       };
 
