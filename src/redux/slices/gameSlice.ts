@@ -1,22 +1,36 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { Middleware, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "@/redux/store";
+import type { levelItem } from "@/utils/levelList";
+import type { recipeItem } from "@/utils/levelRecipes";
+
+type GameRecordType = {
+  level: levelItem["level"];
+  recipeName: recipeItem["name"];
+  record: string;
+  score: string;
+  targetTime: recipeItem["time"];
+  userName: string;
+};
 
 interface GameState {
-  level: string;
+  [key: string]: GameRecordType[];
 }
 
-const initialState: GameState = {
-  level: "",
-};
+const initialState: GameState = {};
 
 export const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
-    // Use the PayloadAction type to declare the contents of `action.payload`
-    setGameLevel: (state, action: PayloadAction<string>) => {
-      state.level = action.payload;
+    setUserRecord: (state, action: PayloadAction<GameRecordType>) => {
+      if (!state[action.payload.userName]?.length) {
+        const arr = [];
+        arr.push(action.payload);
+        state[action.payload.userName] = arr;
+      } else {
+        state[action.payload.userName].push(action.payload);
+      }
     },
   },
 });
@@ -36,6 +50,6 @@ export const gameMiddleware: Middleware<object, RootState> =
     return result;
   };
 
-export const { setGameLevel } = gameSlice.actions;
+export const { setUserRecord } = gameSlice.actions;
 
 export default gameSlice.reducer;
