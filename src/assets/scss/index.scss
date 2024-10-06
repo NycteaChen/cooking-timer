@@ -1,5 +1,7 @@
 @import "./utils.scss";
+@import "./components/radialProgress.scss";
 
-html, body {
+html,
+body {
   @apply min-h-dvh;
 }

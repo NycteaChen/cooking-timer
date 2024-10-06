@@ -11,7 +11,7 @@ import { GameLevel } from "@/components/GameLevel";
 import { Card } from "@/components/Card";
 
 type GameStarterProps = {
-  goToPlay: () => void;
+  goToPlay: (name: string) => void;
 };
 
 export const GameStarter = ({ goToPlay }: GameStarterProps) => {
@@ -36,7 +36,7 @@ export const GameStarter = ({ goToPlay }: GameStarterProps) => {
       setErrorMsg("pages_game_error_name_format");
     } else {
       setErrorMsg("");
-      goToPlay();
+      goToPlay(name);
     }
   }, [name, goToPlay]);
 

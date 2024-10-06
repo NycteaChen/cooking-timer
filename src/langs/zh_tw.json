@@ -27,7 +27,7 @@
   "component_gameInstruction_desc5": "最後向朋友炫耀一下你的好成績吧！",
   "component_gamingRecipe_title": "請製作一份{{recipe}}",
   "component_gamingRecipe_targetTime": "預期時間：<s>{{second}}</s> 秒",
-  "game_pause_hint": "暫停計時！",
+  "component_gamingOperators_pauseHint": "暫停計時！",
   "component_gamingRecipe_grilledSushi": "炙燒壽司",
   "component_gamingRecipe_eggDropSoup": "蛋花湯",
   "component_gamingRecipe_toast": "烤吐司",

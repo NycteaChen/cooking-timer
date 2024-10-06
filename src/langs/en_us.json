@@ -27,7 +27,7 @@
   "component_gameInstruction_desc5": "Show off your good score to your friends!",
   "component_gamingRecipe_title": "Please make the {{recipe}}",
   "component_gamingRecipe_targetTime": "Estimated time: <s>{{second}}</s> seconds",
-  "game_pause_hint": "Pause the timing!",
+  "component_gamingOperators_pauseHint": "Pause the timing!",
   "component_gamingRecipe_grilledSushi": "Grilled sushi",
   "component_gamingRecipe_eggDropSoup": "Egg-drop soup",
   "component_gamingRecipe_toast": "Toast",
