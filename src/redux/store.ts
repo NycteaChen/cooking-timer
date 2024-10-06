@@ -4,13 +4,11 @@ import gameReducer, {
   preloadGameStore,
 } from "./slices/gameSlice";
 
-export const store = configureStore({
-  reducer: {
-    game: gameReducer,
-  },
+export const store: ReturnType<typeof configureStore> = configureStore({
+  reducer: gameReducer,
   preloadedState: preloadGameStore(),
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(gameMiddleware),
+    getDefaultMiddleware().concat([gameMiddleware]),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

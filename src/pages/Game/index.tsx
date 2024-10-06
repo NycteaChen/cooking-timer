@@ -8,20 +8,19 @@ export const GameContext = createContext({});
 
 export const Game = () => {
   const levelType = useSearchParams()[0].get("level");
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
-  // The `state` arg is correctly typed as `RootState` already
-  // const level = useAppSelector((state) => state.game.level);
-  const navigate = useNavigate();
-  const goToPlay = (name: string) => {
-    setStep(2);
-    setName(name);
-  };
 
   const levelData = useMemo(
     () => levelList.find((item) => item.level === levelType),
     [levelType]
   );
+
+  const goToPlay = (name: string) => {
+    setStep(2);
+    setName(name);
+  };
 
   useEffect(() => {
     if (!levelData) {

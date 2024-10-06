@@ -36,5 +36,12 @@
   "component_gamingRecipe_firedDumpling": "煎餃",
   "component_gamingRecipe_hamburgerSteak": "漢堡排",
   "component_gamingRecipe_lavaCake": "熔岩蛋糕",
-  "component_gamingRecipe_roastChicken": "烤雞"
+  "component_gamingRecipe_roastChicken": "烤雞",
+  "component_gameResult_title": "計算成績",
+  "component_gameResult_yours": "{{name}} 的成績為",
+  "component_gameResult_perfect": "時間掌控大師就是你！",
+  "component_gameResult_good": "就差那麼一點了！",
+  "component_gameResult_normal": "感覺還不錯唷！",
+  "component_gameResult_bad": "再加把勁！",
+  "component_gameResult_confusion": "你還是別進廚房吧..."
 }

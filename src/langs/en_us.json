@@ -36,5 +36,12 @@
   "component_gamingRecipe_firedDumpling": "Fried dumplings",
   "component_gamingRecipe_hamburgerSteak": "Hamburger steak",
   "component_gamingRecipe_lavaCake": "Lava cake",
-  "component_gamingRecipe_roastChicken": "Roast chicken"
+  "component_gamingRecipe_roastChicken": "Roast chicken",
+  "component_gameResult_title": "Result",
+  "component_gameResult_yours": "{{name}}'s score is",
+  "component_gameResult_perfect": "You are the time master!",
+  "component_gameResult_good": "It's almost!",
+  "component_gameResult_normal": "Not so bad!",
+  "component_gameResult_bad": "Keep trying!",
+  "component_gameResult_confusion": "You'd better be away from the kitchen..."
 }

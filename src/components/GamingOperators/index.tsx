@@ -63,13 +63,14 @@ export const GamingOperators = memo(
     return (
       <>
         <div className="flex w-full flex-col sm:flex-row-reverse justify-center gap-2">
-          <Button className="w-full flex-1" onClick={() => timeEndHandler()}>
+          <Button className="w-full" onClick={() => timeEndHandler()} size="lg">
             {t("component_button_now")}
           </Button>
           <Button
-            className="w-full flex-1"
+            className="w-full"
             variant="outline"
             onClick={() => timePauseHandler()}
+            size="lg"
           >
             {t("component_button_pause")}
           </Button>

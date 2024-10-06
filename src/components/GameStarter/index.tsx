@@ -71,13 +71,14 @@ export const GameStarter = ({ goToPlay }: GameStarterProps) => {
         <div className="flex flex-col items-center gap-4 py-6 px-8">
           <GameInstruction />
           <div className="flex w-full flex-col sm:flex-row-reverse justify-center gap-2">
-            <Button className="w-full flex-1" onClick={() => confirm()}>
+            <Button className="w-full" onClick={() => confirm()} size="lg">
               {t("component_button_start")}
             </Button>
             <Button
-              className="w-full flex-1"
+              className="w-full"
               variant="outline"
               onClick={() => navigate(`/`)}
+              size="lg"
             >
               {t("component_button_back")}
             </Button>
