@@ -1,11 +1,13 @@
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { Stars } from "../Stars";
 import { useTranslation } from "react-i18next";
 import type { levelItem } from "@/utils/levelList";
+import { GameContext } from "@/pages/Game";
 // import { useAppSelector } from "@/redux/hooks";
 
-export const GameLevel = memo(({ levelData }: { levelData?: levelItem }) => {
+export const GameLevel = memo(() => {
   const { t } = useTranslation();
+  const levelData = useContext(GameContext) as levelItem;
 
   return (
     <>

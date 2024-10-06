@@ -9,14 +9,12 @@ import { Label } from "@/components/ui/label";
 import { GameInstruction } from "@/components/GameInstruction";
 import { GameLevel } from "@/components/GameLevel";
 import { Card } from "@/components/Card";
-import type { levelItem } from "@/utils/levelList";
 
 type GameStarterProps = {
   goToPlay: () => void;
-  levelData?: levelItem;
 };
 
-export const GameStarter = ({ goToPlay, levelData }: GameStarterProps) => {
+export const GameStarter = ({ goToPlay }: GameStarterProps) => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
@@ -46,7 +44,7 @@ export const GameStarter = ({ goToPlay, levelData }: GameStarterProps) => {
     <>
       <Card>
         <div className="bg-info rounded-t-xl pt-6 px-6 space-y-2 text-center flex flex-col justify-center gap-2">
-          <GameLevel levelData={levelData} />
+          <GameLevel />
           <Label className="w-full max-w-xs mx-auto" htmlFor="name">
             {t("pages_game_label_name")}
             <strong className="ml-1 text-accent">*</strong>

@@ -1,8 +1,10 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, createContext } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { GameStarter } from "@/components/GameStarter";
 import { GamingCard } from "@/components/GamingCard";
 import levelList from "@/utils/levelList";
+
+export const GameContext = createContext({});
 
 export const Game = () => {
   const levelType = useSearchParams()[0].get("level");
@@ -27,11 +29,9 @@ export const Game = () => {
 
   return (
     <>
-      {step === 1 ? (
-        <GameStarter goToPlay={goToPlay} levelData={levelData} />
-      ) : (
-        <GamingCard levelData={levelData} />
-      )}
+      <GameContext.Provider value={levelData || {}}>
+        {step === 1 ? <GameStarter goToPlay={goToPlay} /> : <GamingCard />}
+      </GameContext.Provider>
     </>
   );
 };
