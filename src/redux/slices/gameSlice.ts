@@ -4,7 +4,7 @@ import type { RootState } from "@/redux/store";
 import type { levelItem } from "@/utils/levelList";
 import type { recipeItem } from "@/utils/levelRecipes";
 
-type GameRecordType = {
+export type GameRecordType = {
   level: levelItem["level"];
   recipeName: recipeItem["name"];
   record: string;
@@ -13,23 +13,25 @@ type GameRecordType = {
   userName: string;
 };
 
-interface GameState {
-  [key: string]: GameRecordType[];
+export interface GameState {
+  playerRecords: {
+    [key: string]: GameRecordType[];
+  };
 }
 
-const initialState: GameState = {};
+const initialState: GameState = { playerRecords: {} };
 
 export const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
     setUserRecord: (state, action: PayloadAction<GameRecordType>) => {
-      if (!state[action.payload.userName]?.length) {
+      if (!state?.playerRecords?.[action.payload.userName]?.length) {
         const arr = [];
         arr.push(action.payload);
-        state[action.payload.userName] = arr;
+        state.playerRecords[action.payload.userName] = arr;
       } else {
-        state[action.payload.userName].push(action.payload);
+        state.playerRecords[action.payload.userName].push(action.payload);
       }
     },
   },
