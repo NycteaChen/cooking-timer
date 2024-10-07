@@ -1,8 +1,8 @@
 import { memo, useContext } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { RecipeContext } from "@/contexts/recipe.context";
 import type { recipeItem } from "@/utils/levelRecipes";
 import requireImage from "@/utils/requireImage";
-import { RecipeContext } from "@/components/GamingCard";
 import { cn } from "@/lib/utils";
 
 export const GamingRecipe = memo(() => {

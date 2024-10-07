@@ -1,8 +1,10 @@
 import { memo, useState, useEffect, useContext, useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
+import { GameContext } from "@/contexts/game.context";
 import { useAppDispatch } from "@/redux/hooks";
 import { setUserRecord } from "@/redux/slices/gameSlice";
+import { RecipeContext } from "@/contexts/recipe.context";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -12,8 +14,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { RecipeContext } from "@/components/GamingCard";
-import { GameContext } from "@/pages/Game";
 import type { recipeItem } from "@/utils/levelRecipes";
 import type { levelItem } from "@/utils/levelList";
 import loadingImg from "@/assets/image/loading.png";

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import levelList from "@/utils/levelList";
-import { LevelCard } from "@/components/LevelCard";
+import { LevelCard } from "@/components/_pages/Home/LevelCard";
 
 export const Home = () => {
   const { t } = useTranslation();

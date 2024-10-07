@@ -1,10 +1,9 @@
-import { useState, useMemo, useEffect, createContext } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { GameStarter } from "@/components/GameStarter";
-import { GamingCard } from "@/components/GamingCard";
+import { GameContext } from "@/contexts/game.context";
+import { GameStarter } from "@/components/_pages/Game/GameStarter";
+import { GamingCard } from "@/components/_pages/Game/GamingCard";
 import levelList from "@/utils/levelList";
-
-export const GameContext = createContext({});
 
 export const Game = () => {
   const levelType = useSearchParams()[0].get("level");
