@@ -80,7 +80,7 @@ export const ResultDialog = memo(() => {
                 player={player}
                 setPlayer={setPlayer}
               />
-              <h4 className="text-3xl font-bold break-word md:mr-auto">
+              <h4 className="text-3xl font-bold break-word md:mr-auto text-center md:text-left">
                 {player}
               </h4>
             </div>
