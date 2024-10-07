@@ -84,7 +84,7 @@ export const GameResult = memo(({ record }: { record: string }) => {
   return (
     <>
       {showMask && (
-        <div className="bg-white/90 fixed top-0 left-0 w-full min-h-[100vh] z-[2] flex items-center justify-center animate-fade-in-300">
+        <div className="bg-white/90 fixed top-0 left-0 w-full h-full min-h-[100vh] z-[2] flex items-center justify-center animate-fade-in-300">
           <img className="animate-shake-1200" src={loadingImg} alt="cooking" />
         </div>
       )}

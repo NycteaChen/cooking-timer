@@ -68,7 +68,7 @@ export const ResultDialog = memo(() => {
             </Button>
           </DialogTrigger>
         )}
-        <DialogContent className="max-w-[1024px]">
+        <DialogContent className="md:max-w-[1024px]">
           <DialogHeader>
             <DialogTitle>{t("component_resultDialog_title")}</DialogTitle>
             <DialogDescription aria-describedby={undefined} />
