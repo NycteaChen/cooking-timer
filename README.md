@@ -58,7 +58,7 @@ or
 pnpm dev
 ```
 
-## Contact
+## Contact me
 Feel free to give your comments.
 
 📫 jungturn01tw@gmail.com
