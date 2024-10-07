@@ -16,7 +16,7 @@ export const PlayerRecordList = memo(
     );
 
     return (
-      <ul className="max-h-[75dvh] overflow-y-auto px-4 md:px-6 flex flex-col space-y-8 md:space-y-10">
+      <ul className="max-h-[calc(100dvh-300px)] overflow-y-auto px-4 md:px-6 flex flex-col space-y-8 md:space-y-10">
         {renderLevelList.map((item) => {
           return (
             <li
