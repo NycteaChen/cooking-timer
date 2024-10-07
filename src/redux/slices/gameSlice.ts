@@ -31,7 +31,7 @@ export const gameSlice = createSlice({
         arr.push(action.payload);
         state.playerRecords[action.payload.userName] = arr;
       } else {
-        state.playerRecords[action.payload.userName].push(action.payload);
+        state.playerRecords[action.payload.userName].unshift(action.payload);
       }
     },
   },

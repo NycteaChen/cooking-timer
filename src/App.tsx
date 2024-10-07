@@ -13,6 +13,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/game" element={<Game />} />
+            <Route
+              path="*"
+              element={
+                <section className="text-center text-2xl font-bold">
+                  404 not found
+                </section>
+              }
+            />
           </Routes>
         </section>
       </main>

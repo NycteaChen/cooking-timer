@@ -18,7 +18,7 @@ export const Game = () => {
 
   const goToPlay = (name: string) => {
     setStep(2);
-    setName(name);
+    setName(name.trim());
   };
 
   useEffect(() => {

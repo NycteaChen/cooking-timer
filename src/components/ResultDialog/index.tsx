@@ -1,5 +1,6 @@
 import { memo, useMemo, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import { useAppSelector } from "@/redux/hooks";
 import type { GameState, GameRecordType } from "@/redux/slices/gameSlice";
 import { Button } from "@/components/ui/button";
@@ -16,12 +17,15 @@ import { PlayerRecordList } from "@/components/PlayerRecordList";
 import statsImg from "@/assets/image/stats.svg";
 import emptyImg from "@/assets/image/no-data.svg";
 
-export type PlayerRecordsItem = {
+export type PlayerRecordsItemType = {
   [level: string]: GameRecordType[];
 };
 
 export const ResultDialog = memo(() => {
+  const { pathname } = useLocation();
   const { t } = useTranslation();
+  const [player, setPlayer] = useState("");
+
   const playerRecords = useAppSelector(
     (state: GameState) => state.playerRecords
   );
@@ -29,14 +33,13 @@ export const ResultDialog = memo(() => {
     () => Object.keys(playerRecords || {}),
     [playerRecords]
   );
-  const [player, setPlayer] = useState("");
 
   const renderPlayerRecords = useMemo(() => {
-    const data: { [player: string]: PlayerRecordsItem } = {};
+    const data: { [player: string]: PlayerRecordsItemType } = {};
 
     for (const player in playerRecords) {
       data[player] = playerRecords[player].reduce(
-        (acc: PlayerRecordsItem, cur) => {
+        (acc: PlayerRecordsItemType, cur) => {
           if (!acc?.[cur.level]?.length) {
             acc[cur.level] = [];
           }
@@ -58,11 +61,13 @@ export const ResultDialog = memo(() => {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild>
-          <Button className="transition-all bg-secondary fixed w-[60px] h-[60px] rounded-full bottom-5 right-5 shadow-xl p-3 md:hover:scale-105 md:hover:bg-primary">
-            <img src={statsImg} />
-          </Button>
-        </DialogTrigger>
+        {pathname === "/" && (
+          <DialogTrigger asChild>
+            <Button className="transition-all bg-secondary fixed w-[60px] h-[60px] rounded-full bottom-5 right-5 shadow-xl p-3 md:hover:scale-105 md:hover:bg-primary">
+              <img src={statsImg} />
+            </Button>
+          </DialogTrigger>
+        )}
         <DialogContent className="max-w-[1024px]">
           <DialogHeader>
             <DialogTitle>{t("component_resultDialog_title")}</DialogTitle>
