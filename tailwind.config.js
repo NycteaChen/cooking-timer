@@ -58,14 +58,6 @@ export default {
             opacity: 100,
           },
         },
-        "fade-out": {
-          from: {
-            opacity: 100,
-          },
-          to: {
-            opacity: 0,
-          },
-        },
         "bounce-in": {
           "0%": {
             transform: "scale(.3)",
@@ -98,7 +90,6 @@ export default {
       animation: {
         "fade-in-300": "fade-in 0.3s ease-in-out forwards",
         "fade-in-1000": "fade-in 1s ease-in-out forwards",
-        "fade-out-300": "fade-out 0.3s ease-in-out forwards",
         "bounce-in-1000": "bounce-in 1s ease-in-out forwards",
         "shake-1200": "shake 1.2s linear infinite forwards",
       },

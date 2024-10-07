@@ -42,7 +42,7 @@ export const GameStarter = ({ goToPlay }: GameStarterProps) => {
 
   return (
     <>
-      <Card>
+      <Card className="animate-fade-in-300">
         <div className="bg-info rounded-t-xl pt-6 px-6 space-y-2 text-center flex flex-col justify-center gap-2">
           <GameLevel />
           <Label className="w-full max-w-xs mx-auto" htmlFor="name">

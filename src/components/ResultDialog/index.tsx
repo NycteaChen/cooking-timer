@@ -68,13 +68,13 @@ export const ResultDialog = memo(() => {
             </Button>
           </DialogTrigger>
         )}
-        <DialogContent className="md:max-w-[1024px]">
+        <DialogContent className="xl:max-w-[1024px]">
           <DialogHeader>
             <DialogTitle>{t("component_resultDialog_title")}</DialogTitle>
             <DialogDescription aria-describedby={undefined} />
           </DialogHeader>
-          <div className="py-4">
-            <div className="flex flex-col items-center py-6 space-y-6 md:space-y-0 md:flex-row-reverse px-4 md:px-6">
+          <div className="py-4 max-w-[calc(100vw-42px)]">
+            <div className="flex flex-col items-center py-6 space-y-6 md:space-y-0 md:flex-row-reverse md:px-6">
               <PlayerSelector
                 playerList={playerNameList}
                 player={player}
