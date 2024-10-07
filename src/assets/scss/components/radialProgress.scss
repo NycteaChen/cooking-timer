@@ -1,6 +1,6 @@
 .progress-ring__circle {
   stroke-dasharray: calc(2 * 3.14 * 40 * (3.6 * var(--value)) / 360), 400;
-  transition: stroke-dashoffset 0.35s;
+  transition: all 0.35s;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 }
