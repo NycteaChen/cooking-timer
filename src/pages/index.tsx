@@ -15,7 +15,7 @@ export const Home = () => {
           {t("pages_home_welcomeText")}
         </h3>
       </section>
-      <section className="flex items-center space-y-3 flex-col md:flex-row md:space-y-0 md:space-x-5 md:justify-center max-w-[1320px] mx-auto">
+      <section className="animate-fade-in-300 flex items-center space-y-3 flex-col md:flex-row md:space-y-0 md:space-x-5 md:justify-center max-w-[1320px] mx-auto">
         {levelList.map((item) => (
           <LevelCard {...item} key={item.level} />
         ))}

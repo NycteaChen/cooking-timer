@@ -41,27 +41,25 @@ export const PlayerRecordLevel = memo(
     }, [totalScore, levelRecord]);
 
     return (
-      <aside>
-        <RadialProgress
-          value={renderProgress}
-          sizeClass="w-[240px] h-[240px]"
-          colorClassName={levelData.color}
-          strokeWidth={3}
+      <RadialProgress
+        value={renderProgress}
+        sizeClass="w-[240px] h-[240px]"
+        colorClassName={levelData.color}
+        strokeWidth={3}
+      >
+        <div
+          className={cn(
+            "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center",
+            levelData.color
+          )}
         >
-          <div
-            className={cn(
-              "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center",
-              levelData.color
-            )}
-          >
-            <h4 className="text-lg font-bold">{t(levelData.name)}</h4>
-            <div className="text-[#999] mt-1">
-              {t("component_resultDialog_average")}
-            </div>
-            <h4 className="text-3xl font-bold mt-3">{renderAverage}</h4>
+          <h4 className="text-lg font-bold">{t(levelData.name)}</h4>
+          <div className="text-[#999] mt-1">
+            {t("component_resultDialog_average")}
           </div>
-        </RadialProgress>
-      </aside>
+          <h4 className="text-3xl font-bold mt-3">{renderAverage}</h4>
+        </div>
+      </RadialProgress>
     );
   }
 );
