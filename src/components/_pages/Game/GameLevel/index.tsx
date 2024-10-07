@@ -1,8 +1,8 @@
 import { memo, useContext } from "react";
-import { Stars } from "../Stars";
+import { Stars } from "../../../Stars";
 import { useTranslation } from "react-i18next";
+import { GameContext } from "@/contexts/game.context";
 import type { levelItem } from "@/utils/levelList";
-import { GameContext } from "@/pages/Game";
 
 export const GameLevel = memo(() => {
   const { t } = useTranslation();

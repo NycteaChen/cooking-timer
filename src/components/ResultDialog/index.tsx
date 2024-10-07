@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from "react";
+import { memo, useMemo, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useAppSelector } from "@/redux/hooks";
 import type { GameState, GameRecordType } from "@/redux/slices/gameSlice";
@@ -11,7 +11,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { PlayerSelector } from "@/components/GameResult/PlayerSelector";
+import { PlayerSelector } from "@/components/PlayerSelector";
 import statsImg from "@/assets/image/stats.svg";
 import emptyImg from "@/assets/image/no-data.svg";
 
@@ -28,7 +28,7 @@ export const ResultDialog = memo(() => {
     () => Object.keys(playerRecords || {}),
     [playerRecords]
   );
-  const [player, setPlayer] = useState(playerNameList[0]);
+  const [player, setPlayer] = useState("");
 
   const playerRecordsList = useMemo(() => {
     const data: { [player: string]: PlayerRecordsItem } = {};
@@ -47,6 +47,12 @@ export const ResultDialog = memo(() => {
     }
     return data;
   }, [playerRecords]);
+
+  useEffect(() => {
+    if (playerNameList[0]) {
+      setPlayer(playerNameList[0]);
+    }
+  }, [playerNameList]);
 
   console.log(playerRecordsList);
 

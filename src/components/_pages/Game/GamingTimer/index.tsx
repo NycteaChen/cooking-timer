@@ -6,10 +6,10 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import { RecipeContext } from "@/components/GamingCard";
-import { GamingTime } from "@/components/GamingTime";
-import { GamingOperators } from "@/components/GamingOperators";
-import { GameResult } from "@/components/GameResult";
+import { RecipeContext } from "@/contexts/recipe.context";
+import { GamingTime } from "@/components/_pages/Game/GamingTime";
+import { GamingOperators } from "@/components/_pages/Game/GamingOperators";
+import { GameResult } from "@/components/_pages/Game/GameResult";
 
 export const GamingTimer = () => {
   const { setGameStart } = useContext(RecipeContext) as {

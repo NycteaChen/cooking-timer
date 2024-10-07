@@ -1,4 +1,4 @@
-import { LangSelector } from "./LangSelector";
+import { LangSelector } from "../LangSelector";
 import logo from "@/assets/image/logo.svg";
 
 export const Header = () => {

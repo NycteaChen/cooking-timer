@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
+import { Button } from "../../../ui/button";
 import type { levelItem } from "@/utils/levelList";
 import { Stars } from "@/components/Stars";
 import requireImage from "@/utils/requireImage";

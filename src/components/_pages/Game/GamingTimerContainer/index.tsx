@@ -1,6 +1,6 @@
 import { memo, useEffect, useState, useRef } from "react";
 import { RadialProgress } from "@/components/RadialProgress";
-import { GamingTimer } from "@/components/GamingTimer";
+import { GamingTimer } from "@/components/_pages/Game/GamingTimer";
 
 type GamingTimerContainerProps = {
   second?: number;

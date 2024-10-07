@@ -6,8 +6,8 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { GameInstruction } from "@/components/GameInstruction";
-import { GameLevel } from "@/components/GameLevel";
+import { GameInstruction } from "@/components/_pages/Game/GameInstruction";
+import { GameLevel } from "@/components/_pages/Game/GameLevel";
 import { Card } from "@/components/Card";
 
 type GameStarterProps = {

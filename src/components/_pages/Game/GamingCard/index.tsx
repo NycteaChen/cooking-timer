@@ -1,12 +1,11 @@
-import { useMemo, useContext, createContext, useState } from "react";
-import { GameContext } from "@/pages/Game";
-import { GamingRecipe } from "@/components/GamingRecipe";
+import { useMemo, useContext, useState } from "react";
+import { GameContext } from "@/contexts/game.context";
+import { GamingRecipe } from "@/components/_pages/Game/GamingRecipe";
 import { Card } from "@/components/Card";
-import { GamingTimerContainer } from "@/components/GamingTimerContainer";
+import { GamingTimerContainer } from "@/components/_pages/Game/GamingTimerContainer";
 import levelRecipes from "@/utils/levelRecipes";
 import type { levelItem } from "@/utils/levelList";
-
-export const RecipeContext = createContext({});
+import { RecipeContext } from "@/contexts/recipe.context";
 
 export const GamingCard = () => {
   const [gameStart, setGameStart] = useState(undefined);
