@@ -19,7 +19,7 @@ export const PlayerSelector = memo(
         setValue={setPlayer}
         placeholder={t("component_resultDialog_select_placeholder")}
         disabled={!playerList?.length}
-        triggerClassName="w-[320px]"
+        triggerClassName="w-full max-w-[320px]"
         keyField={undefined}
       />
     );

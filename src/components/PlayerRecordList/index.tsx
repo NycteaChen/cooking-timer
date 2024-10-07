@@ -1,10 +1,11 @@
 import { memo, useMemo } from "react";
 import levelList from "@/utils/levelList";
-import type { PlayerRecordsItem } from "@/components/ResultDialog";
+import type { PlayerRecordsItemType } from "@/components/ResultDialog";
 import { PlayerRecordLevel } from "@/components/PlayerRecordLevel";
+import { PlayerRecordItem } from "@/components/PlayerRecordItem";
 
 type PlayerRecordListProps = {
-  playerRecord: PlayerRecordsItem;
+  playerRecord: PlayerRecordsItemType;
 };
 
 export const PlayerRecordList = memo(
@@ -14,9 +15,8 @@ export const PlayerRecordList = memo(
       [playerRecord]
     );
 
-    console.log("playerRecord :>> ", playerRecord);
     return (
-      <ul className="max-h-[75dvh] overflow-y-auto px-4 md:px-6">
+      <ul className="max-h-[75dvh] overflow-y-auto px-4 md:px-6 flex flex-col space-y-8 md:space-y-10">
         {renderLevelList.map((item) => {
           return (
             <li
@@ -27,9 +27,7 @@ export const PlayerRecordList = memo(
                 levelData={item}
                 levelRecord={playerRecord[item.level]}
               />
-              {playerRecord[item.level].map((record, index) => (
-                <div key={`${item.level}-${index}`}>{record.userName}</div>
-              ))}
+              <PlayerRecordItem levelRecord={playerRecord[item.level]} />
             </li>
           );
         })}
