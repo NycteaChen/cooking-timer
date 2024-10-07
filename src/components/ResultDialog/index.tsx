@@ -12,10 +12,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { PlayerSelector } from "@/components/PlayerSelector";
+import { PlayerRecordList } from "@/components/PlayerRecordList";
 import statsImg from "@/assets/image/stats.svg";
 import emptyImg from "@/assets/image/no-data.svg";
 
-type PlayerRecordsItem = {
+export type PlayerRecordsItem = {
   [level: string]: GameRecordType[];
 };
 
@@ -30,7 +31,7 @@ export const ResultDialog = memo(() => {
   );
   const [player, setPlayer] = useState("");
 
-  const playerRecordsList = useMemo(() => {
+  const renderPlayerRecords = useMemo(() => {
     const data: { [player: string]: PlayerRecordsItem } = {};
 
     for (const player in playerRecords) {
@@ -53,8 +54,6 @@ export const ResultDialog = memo(() => {
       setPlayer(playerNameList[0]);
     }
   }, [playerNameList]);
-
-  console.log(playerRecordsList);
 
   return (
     <>
@@ -81,11 +80,7 @@ export const ResultDialog = memo(() => {
               </h4>
             </div>
             {playerNameList.length ? (
-              <section className="max-h-[75dvh] overflow-y-auto px-4 md:px-6">
-                <div className="break-word">
-                  {JSON.stringify(playerRecords[player])}
-                </div>
-              </section>
+              <PlayerRecordList playerRecord={renderPlayerRecords[player]} />
             ) : (
               <div className="h-[150px] flex flex-col space-y-3 justify-center items-center">
                 <img

@@ -38,8 +38,13 @@ export const gameSlice = createSlice({
 });
 
 export const preloadGameStore = () => {
-  if (localStorage.getItem("gameState") !== null) {
-    return JSON.parse(localStorage.getItem("gameState") || "{}"); // re-hydrate the store
+  try {
+    if (localStorage.getItem("gameState") !== null) {
+      return JSON.parse(localStorage.getItem("gameState") || "{}");
+    }
+  } catch (error) {
+    localStorage.removeItem("gameState");
+    console.error(error);
   }
 };
 
