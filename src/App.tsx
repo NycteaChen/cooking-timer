@@ -1,10 +1,17 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Home } from "@/pages";
 import { Game } from "@/pages/Game";
 import { Header } from "@/components/Header";
 import { ResultDialog } from "@/components/ResultDialog";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
       <Header />
