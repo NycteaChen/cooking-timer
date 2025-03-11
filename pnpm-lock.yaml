@@ -12,7 +12,7 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-icons':
-        specifier: ^1.3.0
+        specifier: ^1.3.2
         version: 1.3.2(react@18.3.1)
       '@radix-ui/react-label':
         specifier: ^2.1.0
@@ -24,7 +24,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.12)(react@18.3.1)
       '@reduxjs/toolkit':
-        specifier: ^2.2.7
+        specifier: ^2.3.0
         version: 2.3.0(react-redux@9.1.2(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       class-variance-authority:
         specifier: ^0.7.0
@@ -36,7 +36,7 @@ importers:
         specifier: 'link:'
         version: 'link:'
       i18next:
-        specifier: ^23.15.1
+        specifier: ^23.16.8
         version: 23.16.8
       lucide-react:
         specifier: ^0.447.0
@@ -48,44 +48,44 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-i18next:
-        specifier: ^15.0.2
+        specifier: ^15.1.1
         version: 15.1.1(i18next@23.16.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-redux:
         specifier: ^9.1.2
         version: 9.1.2(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)
       react-router-dom:
-        specifier: ^6.26.1
+        specifier: ^6.28.0
         version: 6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tailwind-merge:
-        specifier: ^2.5.2
+        specifier: ^2.5.5
         version: 2.5.5
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.15(ts-node@10.9.2(@types/node@22.9.4)(typescript@5.7.2)))
     devDependencies:
       '@eslint/js':
-        specifier: ^9.9.0
+        specifier: ^9.15.0
         version: 9.15.0
       '@testing-library/jest-dom':
-        specifier: ^6.4.8
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/react':
-        specifier: ^16.0.0
+        specifier: ^16.0.1
         version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@testing-library/user-event':
         specifier: ^14.5.2
         version: 14.5.2(@testing-library/dom@10.4.0)
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.7.4
+        specifier: ^22.9.4
         version: 22.9.4
       '@types/react':
-        specifier: ^18.3.3
+        specifier: ^18.3.12
         version: 18.3.12
       '@types/react-dom':
-        specifier: ^18.3.0
+        specifier: ^18.3.1
         version: 18.3.1
       '@types/react-router-dom':
         specifier: ^5.3.3
@@ -94,25 +94,25 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       '@vitejs/plugin-react':
-        specifier: ^4.3.1
-        version: 4.3.3(vite@5.4.11(@types/node@22.9.4)(sass-embedded@1.81.0))
+        specifier: ^4.3.3
+        version: 4.3.3(vite@5.4.14(@types/node@22.9.4)(sass-embedded@1.81.0))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
       eslint:
-        specifier: ^9.9.0
+        specifier: ^9.15.0
         version: 9.15.0(jiti@1.21.6)
       eslint-plugin-react-hooks:
-        specifier: ^5.1.0-rc.0
+        specifier: 5.1.0-rc-fb9a90fa48-20240614
         version: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.15.0(jiti@1.21.6))
       eslint-plugin-react-refresh:
-        specifier: ^0.4.9
+        specifier: ^0.4.14
         version: 0.4.14(eslint@9.15.0(jiti@1.21.6))
       gh-pages:
-        specifier: ^6.1.1
+        specifier: ^6.2.0
         version: 6.2.0
       globals:
-        specifier: ^15.9.0
+        specifier: ^15.12.0
         version: 15.12.0
       identity-obj-proxy:
         specifier: ^3.0.0
@@ -124,29 +124,29 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       postcss:
-        specifier: ^8.4.47
+        specifier: ^8.4.49
         version: 8.4.49
       sass-embedded:
-        specifier: ^1.79.4
+        specifier: ^1.81.0
         version: 1.81.0
       tailwindcss:
-        specifier: ^3.4.13
+        specifier: ^3.4.15
         version: 3.4.15(ts-node@10.9.2(@types/node@22.9.4)(typescript@5.7.2))
       ts-jest:
-        specifier: ^29.2.4
+        specifier: ^29.2.5
         version: 29.2.5(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.9.4)(ts-node@10.9.2(@types/node@22.9.4)(typescript@5.7.2)))(typescript@5.7.2)
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.9.4)(typescript@5.7.2)
       typescript:
-        specifier: ^5.5.3
+        specifier: ^5.7.2
         version: 5.7.2
       typescript-eslint:
-        specifier: ^8.0.1
+        specifier: ^8.16.0
         version: 8.16.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.7.2)
       vite:
-        specifier: ^5.4.1
-        version: 5.4.11(@types/node@22.9.4)(sass-embedded@1.81.0)
+        specifier: ^5.4.14
+        version: 5.4.14(@types/node@22.9.4)(sass-embedded@1.81.0)
 
 packages:
 
@@ -321,6 +321,10 @@ packages:
 
   '@babel/runtime@7.26.0':
     resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.26.9':
+    resolution: {integrity: sha512-aA63XwOkcl4xxQa3HjPMqOP6LiK0ZDv3mUPYEFXkpHbaFjtGggE1A61FjFzJnB+p7/oy2gA8E+rcBNl/zC1tMg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.25.9':
@@ -2369,8 +2373,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nanoid@3.3.7:
-    resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
+  nanoid@3.3.9:
+    resolution: {integrity: sha512-SppoicMGpZvbF1l3z4x7No3OlIjP7QJvC9XR7AhZr1kL133KHnKPztkKDc+Ir4aJ/1VhTySrtKhrsycmrMQfvg==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -3153,8 +3157,8 @@ packages:
   varint@6.0.0:
     resolution: {integrity: sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==}
 
-  vite@5.4.11:
-    resolution: {integrity: sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==}
+  vite@5.4.14:
+    resolution: {integrity: sha512-EK5cY7Q1D8JNhSaPKVK4pwBFvaTmZxEnoKXLG/U9gmdDcihQGNzFlgIvaxezFR4glP1LsuiedwMBqCXH3wZccA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -3466,6 +3470,10 @@ snapshots:
       '@babel/helper-plugin-utils': 7.25.9
 
   '@babel/runtime@7.26.0':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
+  '@babel/runtime@7.26.9':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -4196,7 +4204,7 @@ snapshots:
   '@testing-library/dom@10.4.0':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.26.9
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       chalk: 4.1.2
@@ -4416,14 +4424,14 @@ snapshots:
       '@typescript-eslint/types': 8.16.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitejs/plugin-react@4.3.3(vite@5.4.11(@types/node@22.9.4)(sass-embedded@1.81.0))':
+  '@vitejs/plugin-react@4.3.3(vite@5.4.14(@types/node@22.9.4)(sass-embedded@1.81.0))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.11(@types/node@22.9.4)(sass-embedded@1.81.0)
+      vite: 5.4.14(@types/node@22.9.4)(sass-embedded@1.81.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5740,7 +5748,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.7: {}
+  nanoid@3.3.9: {}
 
   natural-compare@1.4.0: {}
 
@@ -5875,7 +5883,7 @@ snapshots:
 
   postcss@8.4.49:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.9
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -6449,7 +6457,7 @@ snapshots:
 
   varint@6.0.0: {}
 
-  vite@5.4.11(@types/node@22.9.4)(sass-embedded@1.81.0):
+  vite@5.4.14(@types/node@22.9.4)(sass-embedded@1.81.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.49
